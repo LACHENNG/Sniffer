@@ -34,7 +34,7 @@ CopyRights : Lang@NWPU
 
 **项目截图**
 
-<img src="demoImages\image-20220602142536054.png" alt="image-20220602142536054" style="zoom:50%;" />
+<img src="demoImages\image-20220602142536054.png" alt="image-20220602142536054" style="zoom:30%;" />
 
 
 
@@ -84,7 +84,7 @@ CopyRights : Lang@NWPU
 
 ​	为了防止GUI类代码过于膨胀，应当尽量避免将所有的功能都写入GUI类，导致类体积难以控制，无畏增加了理解、维护难度。为了提高项目的可读性和可维护性，本项目的总体实现采用“**前后端分离**”的方式，前端GUI和后端抓包、分析分别使用不同的类进行实现。
 
-![sniffer程序架构](C:\Users\12255\Desktop\sniffer程序架构.jpg)
+<img src="demoImages\snifferArch.jpg" alt="" style="zoom:20%;" />
 
 ​		                                                                                      Fig1：该项目的底层实现概要
 
@@ -105,7 +105,7 @@ CopyRights : Lang@NWPU
 
     该步需要查阅手册，熟悉TCP/IP协议栈以太网常见协议头的定义（Ethernet、IPv4、 IPv6、ICMP、ARP、TCP、UDP等）才能正确处理数据，并需要对指针操作、内存拷贝等操作比较熟悉。该类的内部工作流程可以简单总结成如下的**图例**：
 
-    ![image-20220601203045518](demoImages\image-20220601203045518.png)
+    <img src="demoImages\image-20220601203045518.png" alt="" style="zoom:50%;" />
 
 ​	4. netprotocol.h 定义了常见的**网络协议头**、一些**宏定义**和用于**保存解析结果**和**包计数统计**的数据结构等
 
@@ -117,7 +117,7 @@ CopyRights : Lang@NWPU
 
 1. #### 网卡接口选择
 
-   ![image-20220602142746323](demoImages\image-20220602142746323.png)
+   <img src="demoImages\image-20220602142746323.png" alt="" style="zoom:40%;" />
 
    
 
@@ -125,7 +125,7 @@ CopyRights : Lang@NWPU
 
    2.1 按照协议类型过滤
 
-   ![image-20220602142906674](demoImages\image-20220602142906674.png)
+   <img src="demoImages\image-20220602142906674.png" alt="" style="zoom:40%;" />
 
    
 
@@ -133,51 +133,65 @@ CopyRights : Lang@NWPU
 
    **dst net 10.27**: 接受网段为10.27.xx.xx的数据
 
-   <img src="demoImages\image-20220602120124046.png" alt="image-20220602120124046" style="zoom:100%;" />
+   <img src="demoImages\image-20220602120124046.png" alt="image-20220602120124046" style="zoom:70%;" />
 
    **src net 10**: 接受源地址为10.xx.xx.xx的所有数据
 
-   ![image-20220602120535420](demoImages\image-20220602120535420.png)
+   <img src="demoImages\image-20220602120535420.png" alt="" style="zoom:70%;" />
 
    2.3 按照端口过滤
 
-   ![image-20220602121025901](demoImages\image-20220602121025901.png)
+   <img src="demoImages\image-20220602121025901.png" alt="" style="zoom:70%;" />
+
+   
 
    2.4 混合规则（使用 and、or、not 进行组合），语法参考软件中的“帮助”按钮查看**过滤器语法文档**，由于组合方式很多，下面仅提供一个作为示例：
 
    ​		过滤协议为TCP、目标端口为1328且源主机IP为13网段的数据包
 
-   ![image-20220602122017827](demoImages\image-20220602122017827.png)
+   <img src="demoImages\image-20220602122017827.png" alt="" style="zoom:70%;" />
+
+   
 
 3. #### 展示数据包详情
 
-   ![image-20220602122222562](demoImages\image-20220602122222562.png)
+   <img src="demoImages\image-20220602122222562.png" alt="" style="zoom:70%;" />
+
+   
 
 4. #### 统计数据
 
-   ![image-20220602122403096](demoImages\image-20220602122403096.png)
+   <img src="demoImages\image-20220602122403096.png" alt="" style="zoom:70%;" />
+
+   
 
 5. #### 保存数据
 
-   ![image-20220602122520610](demoImages\image-20220602122520610.png)
+   <img src="demoImages\image-20220602122520610.png" alt="" style="zoom:60%;" />
 
-   ![image-20220602122534423](demoImages\image-20220602122534423.png)
+   <img src="demoImages\image-20220602122534423.png" alt="" style="zoom:70%;" />
 
-   ![image-20220602122649394](C:\Users\12255\AppData\Roaming\Typora\typora-user-images\image-20220602122649394.png)
+   <img src="demoImages\image-20220602122649394.png" alt="" style="zoom:70%;" />
+
+   
+
+   
 
 6. #### 读取数据
 
 使用刚刚保存的文件（packets.dmp),并打开
 
-![image-20220602122743396](demoImages\image-20220602122743396.png)
+<img src="demoImages\image-20220602122743396.png" alt="" style="zoom:70%;" />
 
 注意，程序并未选择任何网卡，可以看到，程序加载了文件里面的数据：
 
-![image-20220602123004609](demoImages\image-20220602123004609.png)
+<img src="demoImages\image-20220602123004609.png" alt="" style="zoom:70%;" />
 
 
 
-其它：打开该网站可以出现ipv6数据包[新华社评论员：依新法立新风，香港迈出民主新步伐 (baidu.com)](https://baijiahao.baidu.com/s?id=1732234451580652578)
+
+
+其它：打开该网站可以出现ipv6数据包[IPv6测试](https://baijiahao.baidu.com/s?id=1732234451580652578)
 
 
 
@@ -189,25 +203,15 @@ CopyRights : Lang@NWPU
 
 ​	为了方便操控GUI的控件（在mysniffDlg.h中)，现将控件以及其对于的变量名的对应关系总结如下：
 
-![image-20220602132225662](C:\Users\12255\AppData\Roaming\Typora\typora-user-images\image-20220602132225662.png)
+<img src="demoImages\image-20220602132225662.png" alt="" style="zoom:70%;" />
 
 #### **2. 封包解包过程：**
 
-
-
-![image-20220425210851626](demoImages/packUnpack.png)
-
-
-
-
+<img src="demoImages/packUnpack.png" alt="" style="zoom:90%;" />
 
 #### 3. 一些协议头的定义
 
-![image-20220425211026217](C:\Users\12255\AppData\Roaming\Typora\typora-user-images\image-20220425211026217.png)
-
-
-
-
+<img src="demoImages/image-20220425211026217.png" alt="" style="zoom:50%;" />
 
 ### 特别鸣谢:
 
@@ -219,7 +223,7 @@ CopyRights : Lang@NWPU
 
 ​	本人就读于西北工业大学，本项目是我职业生涯开源的第一个小型项目，项目中可能会隐藏很多bug，甚至设计本身都可能存在很大的缺陷，但无论如何，我在进步，希望这个项目对你也有所帮助，期待与你共同进步！
 
-​	最后，如果喜欢本项目的话，记得点亮小星星哦。
+​	**最后，如果喜欢本项目的话，记得点亮小星星哦。**
 
 ​	
 
