@@ -34,7 +34,7 @@ CopyRights : Lang@NWPU
 
 **项目截图**
 
-<img src="demoImages\image-20220602142536054.png" alt="image-20220602142536054" style="zoom:30%;" />
+<img src="demoImages\image-20220603175231534.png" alt="image-20220602142536054" style="zoom:30%;" />
 
 
 
