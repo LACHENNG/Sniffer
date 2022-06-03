@@ -105,7 +105,7 @@ CopyRights : Lang@NWPU
 
     该步需要查阅手册，熟悉TCP/IP协议栈以太网常见协议头的定义（Ethernet、IPv4、 IPv6、ICMP、ARP、TCP、UDP等）才能正确处理数据，并需要对指针操作、内存拷贝等操作比较熟悉。该类的内部工作流程可以简单总结成如下的**图例**：
 
-    ![image-20220601203045518](C:\Users\12255\AppData\Roaming\Typora\typora-user-images\image-20220601203045518.png)
+    ![image-20220601203045518](demoImages\image-20220601203045518.png)
 
 ​	4. netprotocol.h 定义了常见的**网络协议头**、一些**宏定义**和用于**保存解析结果**和**包计数统计**的数据结构等
 
