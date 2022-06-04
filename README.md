@@ -2,7 +2,7 @@
 
 CopyRights : Lang@NWPU
 
-项目即将开源...
+源码即将开源...
 
 ### 工具特点:
 
@@ -54,6 +54,7 @@ CopyRights : Lang@NWPU
 
 > 注意：由于Winpcap驱动年久失修，导致在Windows10下面无法找到网卡设备，如果你已经按照Winpcap驱动，请卸载，并安装npcap（或者直接进入npcap驱动的安装，会自动检测，并按照提示卸载Winpcap)，npcap支持Win7及win10系统，特别注意的是安装时选择接口兼容winpcap即可，原基于winpcap的应用无需更改就可以使用
 
+然后在release文件夹中找到可执行文件，运行即可
 
 
 2.（**可选**）**自己进行开发（开发者环境配置）：**
