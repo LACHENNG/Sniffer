@@ -1,9 +1,5 @@
 ## Bulid you own Sniffer using C++ and MFC
 
-CopyRights : Lang@NWPU
-
-源码即将开源...
-
 ### 工具特点:
 
 基于Wincap + MFC的sniffer 工具，能够抓取流经指定网卡的数据并进行分析，功能如下
